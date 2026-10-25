@@ -1,4 +1,4 @@
-# seanxhr137 · 个人博客
+# 谢和睿 · 个人博客
 
 这是一个使用 Markdown、Jekyll、HTML 和 CSS 的静态个人博客。GitHub Actions 会在推送到 `main` 后构建并发布到 GitHub Pages；本机无需安装额外构建工具。
 
