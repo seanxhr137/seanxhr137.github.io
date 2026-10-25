@@ -1,0 +1,10 @@
+title: seanxhr137 · 个人博客
+description: seanxhr137 的个人博客，用 Markdown 记录文章与项目。
+lang: zh-CN
+timezone: Asia/Kuala_Lumpur
+markdown: kramdown
+permalink: /posts/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section id="top" class="wrap hero" aria-labelledby="hero-title">
+  <div>
+    <p class="eyebrow">Personal blog · {{ 'now' | date: '%Y' }}</p>
+    <h1 id="hero-title">你好，我是<br>{{ site.title | split: '·' | first }}。</h1>
+    <p class="hero-copy">这里是 seanxhr137 的个人博客，用 Markdown 记录文章与项目，并通过 Jekyll 和 GitHub Pages 发布。</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#writing">读读我的文章</a>
+      <a class="button secondary" href="https://github.com/seanxhr137">访问 GitHub</a>
+    </div>
+  </div>
+  <div class="hero-card" aria-label="seanxhr137 的文字头像"><div class="avatar">SX</div></div>
+</section>
+
+<section id="writing" class="wrap section" aria-labelledby="writing-title">
+  <div class="section-heading"><div><p class="eyebrow">Latest notes</p><h2 id="writing-title">最近写了什么</h2><div class="rule"></div></div><p>以后只需要在 `_posts` 文件夹中新增 Markdown 文件。</p></div>
+  <div class="article-grid">
+    {% for post in site.posts limit: 6 %}
+    <article class="card">
+      <div class="card-meta">{{ post.date | date: '%Y.%m.%d' }}{% if post.tags %} · {{ post.tags | first }}{% endif %}</div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      <a class="card-link" href="{{ post.url | relative_url }}">阅读文章 →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="wrap section" aria-labelledby="projects-title">
+  <div class="section-heading"><div><p class="eyebrow">Selected work</p><h2 id="projects-title">项目与创作</h2><div class="rule"></div></div><p>目前先从这个博客开始；后续公开项目会在这里补充。</p></div>
+  <div class="project-grid">
+    <article class="card"><div class="card-meta">PERSONAL SITE</div><h3>个人博客</h3><p>使用 Markdown 与 Jekyll 写作，通过 GitHub Actions 自动发布到 GitHub Pages。</p><a class="card-link" href="https://github.com/seanxhr137/seanxhr137.github.io">查看博客源码 →</a></article>
+  </div>
+</section>
